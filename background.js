@@ -6,16 +6,15 @@ chrome.webRequest.onBeforeRequest.addListener(function(details) {
   }
 
   const url = new URL(details.url);
-  const match = /^\/j\/(\d+)\/?$/.exec(url.pathname);
+  const match = /^\/(\d+)?$/.exec(url.pathname);
   if (match === undefined || match[1] === undefined) {
     return;
   }
 
   // Save a round trip if the user requested a non-https url
-  // At time of writing, Zoom has non-preloaded HSTS deployed
   url.protocol = 'https:';
-  url.pathname = '/wc/' + encodeURIComponent(match[1]) + '/join';
+  url.pathname = '/' + encodeURIComponent(match[1]) + '/webrtc';
   return {
     redirectUrl: url.href
   }
-}, { urls: ['*://*.zoom.us/j/*'] }, ['blocking']);
+}, { urls: ['*://*.bluejeans.com/*'] }, ['blocking']);
