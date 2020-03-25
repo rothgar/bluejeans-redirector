@@ -11,7 +11,7 @@ When joining a bluejeans meeting, the "join from your browser" link is intention
 
 ### Installation
 
-- Chrome: https://chrome.google.com/webstore/detail/bluejeans-redirector/fmaeeiocbalinknpdkjjfogehkdcbkcd
+- Chrome: https://chrome.google.com/webstore/detail/bluejeans-redirector/mpbnncoggicgalfnbkmgobimjpmiiaoi
 - Firefox: submission pending
 - Opera: submission pending
 - Edge: submission pending
